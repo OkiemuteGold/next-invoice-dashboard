@@ -54,6 +54,7 @@ export default async function InvoicesTable({
               </div>
             ))}
           </div>
+
           <table className="hidden min-w-full text-gray-900 md:table">
             <thead className="rounded-lg text-left text-sm font-normal">
               <tr>
@@ -77,6 +78,7 @@ export default async function InvoicesTable({
                 </th>
               </tr>
             </thead>
+
             <tbody className="bg-white">
               {invoices?.map((invoice) => (
                 <tr
@@ -117,6 +119,10 @@ export default async function InvoicesTable({
               ))}
             </tbody>
           </table>
+
+          {invoices?.length <= 0 && (
+            <div className="w-full bg-white whitespace-nowrap text-sm text-center px-3 py-3 rounded-lg">No result found for <span className="italic font-medium">{`'${query}'`}</span></div>
+          )}
         </div>
       </div>
     </div>
