@@ -216,3 +216,68 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function EditInvoiceSkeleton() {
+  return (
+    <div
+      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}
+    >
+      <div className="rounded-md bg-gray-50 p-4 md:p-6">
+        {/* Customer Name */}
+        <div className="mb-4">
+          <div className="mb-2 block" />
+
+          <div className="relative">
+            <div className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500" />
+
+            <div className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500" />
+          </div>
+        </div>
+
+        {/* Invoice Amount */}
+        <div className="mb-4">
+          <div className="mb-2 block text-sm font-medium" />
+
+          <div className="relative mt-2 rounded-md">
+            <div className="relative">
+              <div className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500" />
+
+              <div className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500" />
+            </div>
+          </div>
+        </div>
+
+        {/* Invoice Status */}
+        <div>
+          <div className="mb-2 block text-sm font-medium" />
+
+          <div className="rounded-md border border-gray-200 bg-white px-[14px] py-3">
+            <div className="flex gap-4">
+              <div className="flex items-center">
+                <div className="h-4 w-4 rounded-full border-gray-300 bg-gray-100 text-gray-600" />
+
+                <div className="ml-2 flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600">
+                  <div className="h-4 w-4 rounded-full" />
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="h-4 w-4 rounded-full border-gray-300 bg-gray-100 text-gray-600" />
+
+                <div className="ml-2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1.5 text-xs font-medium text-white">
+                  <div className="h-4 w-4 rounded-full" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 flex justify-end gap-4">
+        <div className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600" />
+
+        <div className="h-10 px-4 rounded-lg" />
+      </div>
+    </div>
+  );
+}

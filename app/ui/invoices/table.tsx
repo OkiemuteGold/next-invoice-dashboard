@@ -120,7 +120,7 @@ export default async function InvoicesTable({
             </tbody>
           </table>
 
-          {invoices?.length <= 0 && (
+          {(!invoices || invoices?.length <= 0) && (
             <div className="w-full bg-white whitespace-nowrap text-sm text-center px-3 py-3 rounded-lg">No result found for <span className="italic font-medium">{`'${query}'`}</span></div>
           )}
         </div>
